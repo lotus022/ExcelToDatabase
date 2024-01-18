@@ -1,0 +1,26 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    url: jdbc:h2:file:./data/userDB
+    username: abc
+    password: abc
+    driver-class-name: org.h2.Driver 
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    defer-datasource-initialization: false
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+#C:/Users/SBI/eclipse-workspace/JsonFromDB/data/worldDB
+#eclipse-workspace/Microservice/data/mydb
+# upload file 
+app.upload.dir: ./ExcelUploadRepo
+app.upload.file: ./ExcelUploadRepo/C__ExcelUploadRepo.xlsx
+
+
+# Excel file as input for storing it's data
+#file: C:/ExcelUploadRepo/UserDetailsSheet.xlsx
